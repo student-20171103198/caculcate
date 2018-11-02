@@ -56,6 +56,10 @@ class ViewController: UIViewController {
         result.text = result.text! + "0"
     }
     
+    @IBAction func point(_ sender: Any) {
+        result.text = result.text! + "."
+    }
+    
     @IBAction func buttonAdd(_ sender: Any) {
         tempflag = 1
         temp = Double(result.text!)!
@@ -76,7 +80,7 @@ class ViewController: UIViewController {
         if(tempflag == 3)
         {
             temp = temp * Double(result.text!)!
-            result.text = "\(temp)"
+            result.text = String(format:"%.6f",temp)
         }
         if(tempflag == 4)
         {
