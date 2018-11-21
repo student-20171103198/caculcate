@@ -8,6 +8,12 @@
 
 import UIKit
 
+class Stack
+{
+    var tmp = 0
+    
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var result: UITextField!
@@ -22,14 +28,12 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        if(N>0)
+        /*if(N>0)
         {
             result.text = ""
             result.text = result .text! + "1"
-        }
-        else{
+        }*/
         result.text = result.text! + "1"
-        }
     }
     
     @IBAction func button2(_ sender: Any) {
@@ -121,8 +125,9 @@ class ViewController: UIViewController {
     
     @IBAction func buttonAdd(_ sender: Any) {
         tempflag = 1
-        temp = Double(result.text!)!
-        m_temp = Double(result.text!)!
+        //temp = Double(result.text!)!
+        temp = temp + Double(result.text!)!
+        /*m_temp = Double(result.text!)!
         m_temp = m_temp + Double(result.text!)!
         if(N>0)
         {
@@ -130,18 +135,19 @@ class ViewController: UIViewController {
         }
         else
         {
-            result.text = ""
+         
         }
-        N=N+1
+        N=N+1*/
+        result.text = ""
     }
     
     @IBAction func buttonResult(_ sender: Any) {
         if(tempflag == 1)
         {
             temp = temp + Double(result.text!)!
-            m_temp = m_temp + Double(result.text!)!
-            result.text = "\(m_temp)"
-            N=0
+            //m_temp = m_temp + Double(result.text!)!
+            result.text = "\(temp)"
+            //N=0
         }
         if(tempflag == 2)
         {
@@ -168,19 +174,22 @@ class ViewController: UIViewController {
     
     @IBAction func buttonSub(_ sender: Any) {
         tempflag = 2
-        temp = Double(result.text!)!
+        //temp = Double(result.text!)!
+        temp = temp - Double(result.text!)!
         result.text = ""
     }
     
     @IBAction func buttonMul(_ sender: Any) {
         tempflag = 3
-        temp = Double(result.text!)!
+        //temp = Double(result.text!)!
+        temp = temp * Double(result.text!)!
         result.text = ""
     }
     
     @IBAction func buttonDiv(_ sender: Any) {
         tempflag = 4
-        temp = Double(result.text!)!
+        //temp = Double(result.text!)!
+        temp = temp / Double(result.text!)!
         result.text = ""
     }
     
