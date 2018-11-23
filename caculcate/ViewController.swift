@@ -28,12 +28,15 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        /*if(N>0)
+        if(N>0)
         {
             result.text = ""
             result.text = result .text! + "1"
-        }*/
-        result.text = result.text! + "1"
+        }
+        else
+        {
+            result.text = result.text! + "1"
+        }
     }
     
     @IBAction func button2(_ sender: Any) {
@@ -42,7 +45,15 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        result.text = result.text! + "2"
+        if(N>0)
+        {
+            result.text = ""
+            result.text = result .text! + "2"
+        }
+        else
+        {
+            result.text = result.text! + "2"
+        }
     }
     
     
@@ -52,7 +63,15 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        result.text = result.text! + "3"
+        if(N>0)
+        {
+            result.text = ""
+            result.text = result .text! + "3"
+        }
+        else
+        {
+            result.text = result.text! + "3"
+        }
     }
     
     
@@ -62,7 +81,15 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        result.text = result.text! + "4"
+        if(N>0)
+        {
+            result.text = ""
+            result.text = result .text! + "4"
+        }
+        else
+        {
+            result.text = result.text! + "4"
+        }
     }
     
     @IBAction func button5(_ sender: Any) {
@@ -71,7 +98,15 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        result.text = result.text! + "5"
+        if(N>0)
+        {
+            result.text = ""
+            result.text = result .text! + "5"
+        }
+        else
+        {
+            result.text = result.text! + "5"
+        }
     }
     
     @IBAction func button6(_ sender: Any) {
@@ -80,7 +115,15 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        result.text = result.text! + "6"
+        if(N>0)
+        {
+            result.text = ""
+            result.text = result .text! + "6"
+        }
+        else
+        {
+            result.text = result.text! + "6"
+        }
     }
     
     @IBAction func button7(_ sender: Any) {
@@ -89,7 +132,15 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        result.text = result.text! + "7"
+        if(N>0)
+        {
+            result.text = ""
+            result.text = result .text! + "7"
+        }
+        else
+        {
+            result.text = result.text! + "7"
+        }
     }
     
     @IBAction func button8(_ sender: Any) {
@@ -98,7 +149,15 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        result.text = result.text! + "8"
+        if(N>0)
+        {
+            result.text = ""
+            result.text = result .text! + "8"
+        }
+        else
+        {
+            result.text = result.text! + "8"
+        }
     }
     
     @IBAction func button9(_ sender: Any) {
@@ -107,7 +166,15 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        result.text = result.text! + "9"
+        if(N>0)
+        {
+            result.text = ""
+            result.text = result .text! + "9"
+        }
+        else
+        {
+            result.text = result.text! + "9"
+        }
     }
     
     @IBAction func button0(_ sender: Any) {
@@ -116,7 +183,15 @@ class ViewController: UIViewController {
             result.text = ""
             tempflag = 0
         }
-        result.text = result.text! + "0"
+        if(N>0)
+        {
+            result.text = ""
+            result.text = result .text! + "0"
+        }
+        else
+        {
+            result.text = result.text! + "0"
+        }
     }
     
     @IBAction func point(_ sender: Any) {
@@ -127,7 +202,6 @@ class ViewController: UIViewController {
         tempflag = 1
         //temp = Double(result.text!)!
         temp = temp + Double(result.text!)!
-        /*m_temp = Double(result.text!)!
         m_temp = m_temp + Double(result.text!)!
         if(N>0)
         {
@@ -135,10 +209,10 @@ class ViewController: UIViewController {
         }
         else
         {
-         
+         result.text = ""
         }
-        N=N+1*/
-        result.text = ""
+        N=N+1
+        
     }
     
     @IBAction func buttonResult(_ sender: Any) {
@@ -169,6 +243,7 @@ class ViewController: UIViewController {
     
     @IBAction func buttonAC(_ sender: Any) {
         result.text = ""
+        temp = 0
         m_temp = 0
     }
     
