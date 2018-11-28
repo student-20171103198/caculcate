@@ -245,27 +245,64 @@ class ViewController: UIViewController {
         result.text = ""
         temp = 0
         m_temp = 0
+        N = 0
     }
     
     @IBAction func buttonSub(_ sender: Any) {
         tempflag = 2
         //temp = Double(result.text!)!
-        temp = temp - Double(result.text!)!
-        result.text = ""
+        
+        if(N>0)
+        {
+            temp = temp - Double(result.text!)!
+            m_temp = m_temp - Double(result.text!)!
+            result.text = "\(m_temp)"
+        }
+        else
+        {
+            temp = Double(result.text!)!
+            m_temp = Double(result.text!)!
+            result.text = ""
+        }
+        N=N+1
     }
     
     @IBAction func buttonMul(_ sender: Any) {
         tempflag = 3
         //temp = Double(result.text!)!
-        temp = temp * Double(result.text!)!
-        result.text = ""
+        
+        if(N>0)
+        {
+            temp = temp * Double(result.text!)!
+            m_temp = m_temp * Double(result.text!)!
+            result.text = "\(m_temp)"
+        }
+        else
+        {
+            temp = Double(result.text!)!
+            m_temp = Double(result.text!)!
+            result.text = ""
+        }
+        N=N+1
     }
     
     @IBAction func buttonDiv(_ sender: Any) {
         tempflag = 4
         //temp = Double(result.text!)!
-        temp = temp / Double(result.text!)!
-        result.text = ""
+        
+        if(N>0)
+        {
+            temp = temp / Double(result.text!)!
+            m_temp = m_temp / Double(result.text!)!
+            result.text = "\(m_temp)"
+        }
+        else
+        {
+            temp = Double(result.text!)!
+            m_temp = Double(result.text!)!
+            result.text = ""
+        }
+        N=N+1
     }
     
     @IBAction func buttonRem(_ sender: Any) {
