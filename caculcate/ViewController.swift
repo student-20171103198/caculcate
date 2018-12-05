@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var tempflag = 0
     var m_temp:Double = 0
     var N = 0
+    var flg=0
     
     @IBAction func button1(_ sender: Any) {
         if(tempflag == 5)
@@ -203,6 +204,10 @@ class ViewController: UIViewController {
         //temp = Double(result.text!)!
         temp = temp + Double(result.text!)!
         m_temp = m_temp + Double(result.text!)!
+        if(flg>1)
+        {
+            
+        }
         if(N>0)
         {
             result.text = "\(m_temp)"
