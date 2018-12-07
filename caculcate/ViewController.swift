@@ -200,22 +200,44 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonAdd(_ sender: Any) {
-        tempflag = 1
+        
         //temp = Double(result.text!)!
-        temp = temp + Double(result.text!)!
-        m_temp = m_temp + Double(result.text!)!
-        if(flg>1)
-        {
-            
-        }
+        //temp = temp + Double(result.text!)!
+        //m_temp = m_temp + Double(result.text!)!
         if(N>0)
         {
+            if(tempflag == 1)
+            {
+            temp = temp + Double(result.text!)!
+            m_temp = m_temp + Double(result.text!)!
             result.text = "\(m_temp)"
+            }
+            else if(tempflag == 2)
+            {
+                temp = temp - Double(result.text!)!
+                m_temp = m_temp - Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 3)
+            {
+                temp = temp * Double(result.text!)!
+                m_temp = m_temp * Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 4)
+            {
+                temp = temp / Double(result.text!)!
+                m_temp = m_temp / Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
         }
         else
         {
-         result.text = ""
+            temp = Double(result.text!)!
+            m_temp = Double(result.text!)!
+            result.text = ""
         }
+        tempflag = 1
         N=N+1
         
     }
@@ -254,14 +276,38 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonSub(_ sender: Any) {
-        tempflag = 2
+        
         //temp = Double(result.text!)!
         
         if(N>0)
         {
-            temp = temp - Double(result.text!)!
+            /*temp = temp - Double(result.text!)!
             m_temp = m_temp - Double(result.text!)!
-            result.text = "\(m_temp)"
+            result.text = "\(m_temp)"*/
+            if(tempflag == 1)
+            {
+                temp = temp + Double(result.text!)!
+                m_temp = m_temp + Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 2)
+            {
+                temp = temp - Double(result.text!)!
+                m_temp = m_temp - Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 3)
+            {
+                temp = temp * Double(result.text!)!
+                m_temp = m_temp * Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 4)
+            {
+                temp = temp / Double(result.text!)!
+                m_temp = m_temp / Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
         }
         else
         {
@@ -269,18 +315,43 @@ class ViewController: UIViewController {
             m_temp = Double(result.text!)!
             result.text = ""
         }
+        tempflag = 2
         N=N+1
     }
     
     @IBAction func buttonMul(_ sender: Any) {
-        tempflag = 3
+        
         //temp = Double(result.text!)!
         
         if(N>0)
         {
-            temp = temp * Double(result.text!)!
+            /*temp = temp * Double(result.text!)!
             m_temp = m_temp * Double(result.text!)!
-            result.text = "\(m_temp)"
+            result.text = "\(m_temp)"*/
+            if(tempflag == 1)
+            {
+                temp = temp + Double(result.text!)!
+                m_temp = m_temp + Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 2)
+            {
+                temp = temp - Double(result.text!)!
+                m_temp = m_temp - Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 3)
+            {
+                temp = temp * Double(result.text!)!
+                m_temp = m_temp * Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 4)
+            {
+                temp = temp / Double(result.text!)!
+                m_temp = m_temp / Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
         }
         else
         {
@@ -288,18 +359,40 @@ class ViewController: UIViewController {
             m_temp = Double(result.text!)!
             result.text = ""
         }
+        tempflag = 3
         N=N+1
     }
     
     @IBAction func buttonDiv(_ sender: Any) {
-        tempflag = 4
+        
         //temp = Double(result.text!)!
         
         if(N>0)
         {
-            temp = temp / Double(result.text!)!
-            m_temp = m_temp / Double(result.text!)!
-            result.text = "\(m_temp)"
+            if(tempflag == 1)
+            {
+                temp = temp + Double(result.text!)!
+                m_temp = m_temp + Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 2)
+            {
+                temp = temp - Double(result.text!)!
+                m_temp = m_temp - Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 3)
+            {
+                temp = temp * Double(result.text!)!
+                m_temp = m_temp * Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
+            else if(tempflag == 4)
+            {
+                temp = temp / Double(result.text!)!
+                m_temp = m_temp / Double(result.text!)!
+                result.text = "\(m_temp)"
+            }
         }
         else
         {
@@ -307,6 +400,7 @@ class ViewController: UIViewController {
             m_temp = Double(result.text!)!
             result.text = ""
         }
+        tempflag = 4
         N=N+1
     }
     
@@ -326,6 +420,9 @@ class ViewController: UIViewController {
     
     @IBAction func buttonC(_ sender: Any) {
         result.text = ""
+        temp = 0
+        m_temp = 0
+        N = 0
     }
     override func viewDidLoad() {
         super.viewDidLoad()
