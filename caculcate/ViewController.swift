@@ -8,12 +8,6 @@
 
 import UIKit
 
-class Stack
-{
-    var tmp = 0
-    
-}
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var result: UITextField!
@@ -31,8 +25,16 @@ class ViewController: UIViewController {
         }
         if(N>0)
         {
-            result.text = ""
-            result.text = result .text! + "1"
+            if(flg == 1)
+            {
+                result.text = ""
+                result.text = result .text! + "1"
+                flg = 0
+            }
+            else
+            {
+                result.text = result.text! + "1"
+            }
         }
         else
         {
@@ -48,8 +50,16 @@ class ViewController: UIViewController {
         }
         if(N>0)
         {
-            result.text = ""
-            result.text = result .text! + "2"
+            if(flg == 1)
+            {
+                result.text = ""
+                result.text = result .text! + "2"
+                flg = 0
+            }
+            else
+            {
+                result.text = result.text! + "2"
+            }
         }
         else
         {
@@ -66,8 +76,16 @@ class ViewController: UIViewController {
         }
         if(N>0)
         {
-            result.text = ""
-            result.text = result .text! + "3"
+            if(flg == 1)
+            {
+                result.text = ""
+                result.text = result .text! + "3"
+                flg = 0
+            }
+            else
+            {
+                result.text = result.text! + "3"
+            }
         }
         else
         {
@@ -84,8 +102,16 @@ class ViewController: UIViewController {
         }
         if(N>0)
         {
-            result.text = ""
-            result.text = result .text! + "4"
+            if(flg == 1)
+            {
+                result.text = ""
+                result.text = result .text! + "4"
+                flg = 0
+            }
+            else
+            {
+                result.text = result.text! + "4"
+            }
         }
         else
         {
@@ -101,8 +127,16 @@ class ViewController: UIViewController {
         }
         if(N>0)
         {
-            result.text = ""
-            result.text = result .text! + "5"
+            if(flg == 1)
+            {
+                result.text = ""
+                result.text = result .text! + "5"
+                flg = 0
+            }
+            else
+            {
+                result.text = result.text! + "5"
+            }
         }
         else
         {
@@ -118,8 +152,16 @@ class ViewController: UIViewController {
         }
         if(N>0)
         {
-            result.text = ""
-            result.text = result .text! + "6"
+            if(flg == 1)
+            {
+                result.text = ""
+                result.text = result .text! + "6"
+                flg = 0
+            }
+            else
+            {
+                result.text = result.text! + "6"
+            }
         }
         else
         {
@@ -135,8 +177,16 @@ class ViewController: UIViewController {
         }
         if(N>0)
         {
-            result.text = ""
-            result.text = result .text! + "7"
+            if(flg == 1)
+            {
+                result.text = ""
+                result.text = result .text! + "7"
+                flg = 0
+            }
+            else
+            {
+                result.text = result.text! + "7"
+            }
         }
         else
         {
@@ -152,8 +202,16 @@ class ViewController: UIViewController {
         }
         if(N>0)
         {
-            result.text = ""
-            result.text = result .text! + "8"
+            if(flg == 1)
+            {
+                result.text = ""
+                result.text = result .text! + "8"
+                flg = 0
+            }
+            else
+            {
+                result.text = result.text! + "8"
+            }
         }
         else
         {
@@ -169,9 +227,16 @@ class ViewController: UIViewController {
         }
         if(N>0)
         {
-            result.text = ""
-            result.text = result .text! + "9"
-        }
+            if(flg == 1)
+            {
+                result.text = ""
+                result.text = result .text! + "9"
+                flg = 0
+            }
+            else
+            {
+                result.text = result.text! + "9"
+            }        }
         else
         {
             result.text = result.text! + "9"
@@ -186,8 +251,16 @@ class ViewController: UIViewController {
         }
         if(N>0)
         {
-            result.text = ""
-            result.text = result .text! + "0"
+            if(flg == 1)
+            {
+                result.text = ""
+                result.text = result .text! + "0"
+                flg = 0
+            }
+            else
+            {
+                result.text = result.text! + "0"
+            }
         }
         else
         {
@@ -238,6 +311,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         tempflag = 1
+        flg = 1
         N=N+1
         
     }
@@ -273,6 +347,7 @@ class ViewController: UIViewController {
         temp = 0
         m_temp = 0
         N = 0
+        flg = 0
     }
     
     @IBAction func buttonSub(_ sender: Any) {
@@ -316,6 +391,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         tempflag = 2
+        flg = 1
         N=N+1
     }
     
@@ -360,6 +436,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         tempflag = 3
+        flg = 1
         N=N+1
     }
     
@@ -401,6 +478,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         tempflag = 4
+        flg = 1
         N=N+1
     }
     
